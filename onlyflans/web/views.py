@@ -13,6 +13,9 @@ def index(request):
 def about(request):
     return render(request, 'about.html', {})
 
+def base(request):
+    return render(request, 'base.html',{})
+
 @login_required
 def welcome(request):
     flanes_privados = Flan.objects.filter(is_private=True)
